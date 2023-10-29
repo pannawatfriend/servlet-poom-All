@@ -14,9 +14,10 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        HttpSession hs = request.getSession();
+//        HttpSession hs = request.getSession();
+//        hs.setAttribute("color","red");
+
         Student a = new Student(1,"jid");
-        hs.setAttribute("color","red");
         Cookie id = new Cookie("jid_id",a.getId() + "");
         Cookie name = new Cookie("jid_name",a.getName());
         response.addCookie(id);
